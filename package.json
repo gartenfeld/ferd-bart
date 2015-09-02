@@ -1,0 +1,46 @@
+{
+  "name": "ferd-bart",
+  "version": "0.0.2",
+  "description": "FerdX module that allows Ferd to display the Bart schedule",
+  "main": "bart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ferd-bart"
+  ],
+  "author": {
+    "name": "Andrew Kishino"
+  },
+  "contributors": [
+    {
+      "name": "David Rosson"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "bart": "0.0.3",
+    "underscore": "^1.8.3"
+  },
+  "_id": "ferd-bart@0.0.2",
+  "_shasum": "03a72d5aca4f13e1170b19923ea3e279dcffe1c2",
+  "_from": "ferd-bart@0.0.2",
+  "_npmVersion": "2.14.1",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "name": "andrewkishino",
+    "email": "AndrewKishino@gmail.com"
+  },
+  "dist": {
+    "shasum": "03a72d5aca4f13e1170b19923ea3e279dcffe1c2",
+    "tarball": "http://registry.npmjs.org/ferd-bart/-/ferd-bart-0.0.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "andrewkishino",
+      "email": "AndrewKishino@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/ferd-bart/-/ferd-bart-0.0.2.tgz"
+}
