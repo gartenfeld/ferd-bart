@@ -1,4 +1,4 @@
-var bart = require('bart').createClient();
+var bart = require('working-bart').createClient({interval: 0});
 var _ = require('underscore');
 
 var handler = function(data, ferd) {
@@ -61,14 +61,19 @@ var handler = function(data, ferd) {
         }];
     ferd.sendMessage({
       channel: data.channel,
-      as_user: true,
+      as_user: false,
+      username: 'Ferd',
+      unfurl_media: true,
+      icon_url: 'http://i.imgur.com/2rSS5KP.jpg',
       attachments: JSON.stringify(bartMap),
       mrkdwn: true
     });
   } else {
-    if(stations[data.ferd.text]) {
-      var leadingText = 'From *' + stations[data.ferd.text] + '* station:\n\n';
-      bart.on(data.ferd.text, function (estimates) {
+    var station = data.ferd.text;
+    if (stations[station]) {
+      var leadingText = 'From *' + stations[station] + '* station:\n\n';
+  
+      bart.on(station, function (estimates) {
 
         // collapse trains for the same destination
         var collapse = function (trains) {
@@ -99,16 +104,16 @@ var handler = function(data, ferd) {
           
         ferd.sendMessage({
           channel: data.channel,
-          as_user: true,
+          as_user: false,
+          username: 'Ferd',
+          icon_url: 'http://i.imgur.com/2rSS5KP.jpg',
           text: leadingText,
           mrkdwn: true,
           attachments: JSON.stringify(attachments)
         });
 
-        // this line stops recurring messages
-        this.removeAllListeners();
-
       });
+
     } else {
       ferd.sendMessage({
         channel: data.channel,

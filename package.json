@@ -19,7 +19,7 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "bart": "0.0.3",
+    "working-bart": "0.0.1",
     "underscore": "^1.8.3"
   },
   "_id": "ferd-bart@0.0.2",
