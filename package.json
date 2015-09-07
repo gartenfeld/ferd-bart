@@ -1,6 +1,6 @@
 {
   "name": "ferd-bart",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "FerdX module that allows Ferd to display the Bart schedule",
   "main": "bart.js",
   "scripts": {

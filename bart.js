@@ -2,7 +2,6 @@ var bart = require('working-bart').createClient({interval: 0});
 var _ = require('underscore');
 
 var handler = function(data, ferd) {
-
   var stations = {
     '12th' : '12th St. Oakland City Center',
     '16th' : '16th St. Mission',
